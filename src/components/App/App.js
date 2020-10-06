@@ -10,6 +10,25 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
 
+  function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+  }
+
+  useEffect(() => {
+    let newCards = shuffledCards;
+    shuffleArray(newCards);
+    setShuffled(newCards);
+  }, [currentScore])
+
+  useEffect(() => {
+    
+  }, [highScore])
+
   return (
     <Root>
       <GlobalStyle />
@@ -21,7 +40,7 @@ function App() {
       </Header>
       <Container>
         {shuffledCards.map((card) => (
-          <Card card={card}  />
+          <Card currentScore={currentScore} setCurrentScore={setCurrentScore} highScore={highScore} setHighScore={setHighScore} setCurrentScore={setCurrentScore} card={card}  />
         ))}
       </Container>
     </Root>
