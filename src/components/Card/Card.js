@@ -7,9 +7,11 @@ export default function Card({ card, setCurrentScore, highScore, currentScore, s
       if(highScore < currentScore) {
         setHighScore(currentScore)
         setClicked(false)
+        console.log('clicked on clicked, should reset!')
       }
       setCurrentScore(0);
     } else {
+      console.log('clicked on unclicked')
       setClicked(true);
       setCurrentScore(currentScore += 1)
     }
