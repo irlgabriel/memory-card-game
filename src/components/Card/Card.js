@@ -9,17 +9,17 @@ export default function Card({
   clickedCards,
   setClicked,
 }) {
-  function clickHandler(e) {
+  function clickHandler() {
     console.log(card)
     if (clickedCards.includes(card)) {
       if (highScore < currentScore) {
         setHighScore(currentScore);
         setClicked([])
-        console.log("clicked on clicked, should reset!");
+      } else {
+        setClicked([])
       }
       setCurrentScore(0);
     } else {
-      console.log("clicked on unclicked");
       setClicked([...clickedCards, card])
       setCurrentScore((currentScore += 1));
     }

@@ -40,7 +40,6 @@ function App() {
         {shuffledCards.map((card) => (
           <Card
             key={card.title}
-            data-key={card.title}
             currentScore={currentScore}
             setCurrentScore={setCurrentScore}
             highScore={highScore}
