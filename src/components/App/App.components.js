@@ -6,6 +6,7 @@ export const Container = styled.div`
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 `;
 
 export const Header = styled.header`
