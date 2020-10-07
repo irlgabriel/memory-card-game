@@ -5,17 +5,17 @@ import Card from "../Card/Card";
 import { Cards } from "../Card/Data";
 
 function App() {
-  const [cards, setCards] = useState(Cards);
   const [shuffledCards, setShuffled] = useState(Cards);
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
+  const [clickedCards, setClicked] = useState([]);
 
   function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
     }
   }
 
@@ -23,11 +23,9 @@ function App() {
     let newCards = shuffledCards;
     shuffleArray(newCards);
     setShuffled(newCards);
-  }, [currentScore])
+  }, [currentScore]);
 
-  useEffect(() => {
-    
-  }, [highScore])
+  useEffect(() => {}, [highScore]);
 
   return (
     <Root>
@@ -35,12 +33,22 @@ function App() {
       <Header>
         <ScoreBoard>
           <Score>Current Score: {currentScore}</Score>
-          <Score>HighScore: {highScore}</Score>
+          <Score>High Score: {highScore}</Score>
         </ScoreBoard>
       </Header>
       <Container>
         {shuffledCards.map((card) => (
-          <Card currentScore={currentScore} setCurrentScore={setCurrentScore} highScore={highScore} setHighScore={setHighScore} setCurrentScore={setCurrentScore} card={card}  />
+          <Card
+            key={card.title}
+            data-key={card.title}
+            currentScore={currentScore}
+            setCurrentScore={setCurrentScore}
+            highScore={highScore}
+            setHighScore={setHighScore}
+            clickedCards={clickedCards}
+            setClicked={setClicked}
+            card={card}
+          />
         ))}
       </Container>
     </Root>

@@ -13,8 +13,9 @@ export const CardContainer = styled.div`
 
   &:hover {
     transform: scale(1.02);
+    border: 1px solid lightblue;
   }
-  
+
   @media screen and (max-width: 960px) {
     min-height: 500px;
     width: 350px;
