@@ -7,20 +7,25 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-image: url('https://images.pexels.com/photos/4009401/pexels-photo-4009401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 `;
 
 export const Header = styled.header`
-  height: 80px;
+  min-height: 80px;
   display: flex;
   align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid black;
-  background-color: rgba(140, 0, 30, 0.2);
+  justify-content: center;
+  border-bottom: 1px solid lightblue;
+  background-color: rgba(0,0,0,1);
+  color: white;
 `;
 
 export const ScoreBoard = styled.section`
   padding: 0.75rem;
-  border: 1px solid black;
+  font-size: 1.5rem;
   border-radius: 4px;
   background-color: transparent;
 `;

@@ -10,10 +10,12 @@ export const CardContainer = styled.div`
   min-height: 250px;
   width: 200px;
   transition: all 0.3s ease;
+  box-shadow: 0 0 10px lightblue;
+  color: white;
 
   &:hover {
     transform: scale(1.02);
-    border: 1px solid lightblue;
+    outline: 3px solid lightblue;
   }
 
   @media screen and (max-width: 960px) {
