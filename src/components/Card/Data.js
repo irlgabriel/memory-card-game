@@ -22,7 +22,7 @@ export const Cards = [
   {
     title: "Black Mirror",
     img:
-      "http://www.randomhousebooks.com/wp-content/uploads/2017/09/BLACK-MIRROR-ART.jpg",
+      "https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
   },
   {
     title: "Sex Education",
